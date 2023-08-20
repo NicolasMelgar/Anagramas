@@ -1,5 +1,3 @@
-
-
 //Palabras del juego
 let baseDatos = new Array(4);
 baseDatos[0] = ["PERA", "BANANA", "MANZANA", "SANDIA", "MANDARINA", "NARANJA", "KIWI"];
@@ -9,10 +7,8 @@ baseDatos[3] = ["PERU", "ARGENTINA", "URUGUAY", "COLOMBIA", "ECUADOR", "CHILE", 
 
 //CATEGORIAS
 let categorias = ["FRUTAS", "MUSICA", "ANIMALES", "PAISES"];
-
 //cantidad de palabras con las que se jugará en cada categoría
 const cantidadPalabras = 5;
-
 //arreglo para guardar las 5 palabras que juegan
 let palabras = [];
 //este arreglo guarda las palabras desordenadas
@@ -32,7 +28,6 @@ function agregarPalabra(categoria){
 //la primera cez le envío la categoría FRUTAS
 agregarPalabra(baseDatos[pos]);
 
-
 //Desordeno las palabras 
 function desordenarPalabras(){
     for(i = 0; i < palabras.length; i++){
@@ -46,13 +41,11 @@ function desordenarPalabras(){
         //quitamos las comas
         palabraDesordenada = palabraDesordenada.replace(/,/g,"");
         //controlamos que la palabra este desordenada y no sea igual a la ordenada (vaya infeliz jajajaja)
-        if(palabraDesordenada == palabra[i]){
-            //OJO...podría poner nuevamente la función para que reinicie antes de pasar a pushear
+        if(palabraDesordenada === palabras[i]){
             i = i - 1;
         }else{
             //guardamos la palabra desordenada con verificación
             desordenadas.push(palabraDesordenada);
-
         }
     }
 }
@@ -76,7 +69,6 @@ function agregarPalabras(){
         input.setAttribute("onkeyup", "corregir("+i+")");
         div.appendChild(input);
         document.querySelector("#contenedor").appendChild(div);
-
     }
 }
 
@@ -98,10 +90,7 @@ function corregir(i){
     }else{
         document.getElementById(i).className = "";
     }
-
 }
-
-
 
 let btnCreado = false;
 
@@ -114,14 +103,11 @@ function controlFin(){
         button.textContent = "Siguiente";
         button.setAttribute("onclick", "siguiente()");
         document.querySelector("#contenedor").appendChild(button);
-        
         btnCreado = true;
-        
         //desbloqueamos el siguiente nivel
         let niveles = document.getElementsByClassName("nivel");
         niveles[pos].classList = "nivel completado";
     } 
-
 }
 
 function siguiente(){
@@ -143,5 +129,3 @@ function siguiente(){
         document.querySelector("#contenedor").appendChild(h3);
     }
 }
-
-

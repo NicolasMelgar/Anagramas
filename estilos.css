@@ -119,13 +119,11 @@ button{
     align-items: center;
 }
 
-
 /*Ojo con esta parte minuto 20*/
 .nivel i{
     font-size: 40px;
     /* color: #0000; Esto me desaparece el ícono*/
 }
-
 
 .completado{
     background-color: #47a432;
