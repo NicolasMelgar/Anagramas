@@ -8,7 +8,7 @@ baseDatos[3] = ["PERU", "ARGENTINA", "URUGUAY", "COLOMBIA", "ECUADOR", "CHILE", 
 //CATEGORIAS
 let categorias = ["FRUTAS", "MUSICA", "ANIMALES", "PAISES"];
 //cantidad de palabras con las que se jugará en cada categoría
-const cantidadPalabras = 5;
+const cantidadPalabras = 1;
 //arreglo para guardar las 5 palabras que juegan
 let palabras = [];
 //este arreglo guarda las palabras desordenadas
@@ -125,7 +125,14 @@ function siguiente(){
         agregarPalabras();
     }else{
         let h3 = document.createElement("h3");
-        h3.textContent = "¡JUEGO FINALIZADO! ¡MUY BIEN!";
+        h3.textContent = "¡JUEGO FINALIZADO!";
         document.querySelector("#contenedor").appendChild(h3);
+        let h3b = document.createElement("h3");
+        h3b.textContent = "¡MUY BIEN!";
+        document.querySelector("#contenedor").appendChild(h3b);
+        let reinicio = document.createElement("button");
+        reinicio.textContent = "Volver a jugar";
+        reinicio.setAttribute("onclick", "location.reload()");
+        document.querySelector("#contenedor").appendChild(reinicio);
     }
 }
