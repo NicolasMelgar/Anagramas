@@ -8,7 +8,7 @@ baseDatos[3] = ["PERU", "ARGENTINA", "URUGUAY", "COLOMBIA", "ECUADOR", "CHILE", 
 //CATEGORIAS
 let categorias = ["FRUTAS", "MUSICA", "ANIMALES", "PAISES"];
 //cantidad de palabras con las que se jugará en cada categoría
-const cantidadPalabras = 1;
+const cantidadPalabras = 5;
 //arreglo para guardar las 5 palabras que juegan
 let palabras = [];
 //este arreglo guarda las palabras desordenadas
